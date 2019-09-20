@@ -24,5 +24,5 @@ pay = total * .10
 
 # Output
 print('\nAverage Sales: $' + format(average, ',.2f'))
-print('Total Sales:            $' + format(total, ',.2f'))
-print('Pay:                           $' + format(pay, ',.2f'))
+print('Total Sales:   $' + format(total, ',.2f'))
+print('Pay:           $' + format(pay, ',.2f'))
