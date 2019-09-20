@@ -5,14 +5,19 @@ pay = 0.0
 total = 0.0
 sales = 0.0
 average = 0.0
-days = 1
+days = 0
+counter = 0
 
 # Input
-sales = float(input('Please enter the number of daily sales: '))
-total +=sales
+days = int(input('Please enter the number of day(s): '))
+
+# Get sales
+for i in range(counter, days, 1):
+    sales = int(input('Please enter the daily sales amount: '))
+    total += sales
 
 # Math
-average = sales / days
+average = total / days
 pay = total * .10
 
 
