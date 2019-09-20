@@ -8,14 +8,14 @@ average = 0.0
 days = 0
 counter = 0
 
-# Input
+# Get days
 days = int(input('Please enter the number of day(s): '))
 
-print() # Formatting
+print() # Formatting - Add blank line
 
 # Get sales
 for i in range(counter, days, 1):
-    sales = float(input('Please enter day ' + format(i +1) + ' sales amount: '))
+    sales = float(input(f'Please enter day {i + 1} sales amount: ')) # Formatting - Displays the day number
     total += sales
 
 # Math
