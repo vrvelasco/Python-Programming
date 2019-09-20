@@ -11,17 +11,18 @@ counter = 0
 # Input
 days = int(input('Please enter the number of day(s): '))
 
+print() # Formatting
+
 # Get sales
 for i in range(counter, days, 1):
-    sales = int(input('Please enter the daily sales amount: '))
+    sales = float(input('Please enter day ' + format(i +1) + ' sales amount: '))
     total += sales
 
 # Math
 average = total / days
 pay = total * .10
 
-
 # Output
 print('\nAverage Sales: $' + format(average, ',.2f'))
-print('Total Sales:       $' + format(total, ',.2f'))
-print('Pay:                    $' + format(pay, ',.2f'))
+print('Total Sales:            $' + format(total, ',.2f'))
+print('Pay:                           $' + format(pay, ',.2f'))
