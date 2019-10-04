@@ -3,10 +3,10 @@
 # Functions
 def main():
     t1 = float(input('Please enter the FIRST test score: '))
-    t2 = float(input('\nPlease enter the SECOND test score: '))
-    t3 = float(input('\nPlease enter the THIRD test score: '))
-    t4 = float(input('\nPlease enter the FOURTH test score: '))
-    t5 = float(input('\nPlease enter the FIFTH test score: '))
+    t2 = float(input('Please enter the SECOND test score: '))
+    t3 = float(input('Please enter the THIRD test score: '))
+    t4 = float(input('Please enter the FOURTH test score: '))
+    t5 = float(input('Please enter the FIFTH test score: '))
 
     # Calculate Average
     average = calc_avg(t1, t2, t3, t4, t5)
@@ -19,13 +19,15 @@ def main():
     g5 = get_grade(t5)
     
     # Display Results
-    print('\nScore\tNumeric Score\tLetter Grade')
-    print('Score 1:\t' + format(t1, '.1f') + '\t' + g1)
-    print('Score 2:\t' + format(t2, '.1f') + '\t' + g2)
-    print('Score 3:\t' + format(t3, '.1f') + '\t' + g3)
-    print('Score 4:\t' + format(t4, '.1f') + '\t' + g4)
-    print('Score 5:\t' + format(t5, '.1f') + '\t' + g5)
-    print('Average Score: \t' + format(average, '.1f'))
+    print('\nScore' + 'Numeric Score'.center(25, ' ') + 'Letter Grade')
+    print(''.ljust(26, '=')) # Formatting
+    print('Score 1:' + format(t1, '.1f').rjust(15, ' ') + g1.rjust(25, ' '))
+    print('Score 2:' + format(t2, '.1f').rjust(15, ' ') + g2.rjust(25, ' '))
+    print('Score 3:' + format(t3, '.1f').rjust(15, ' ') + g3.rjust(25, ' '))
+    print('Score 4:' + format(t4, '.1f').rjust(15, ' ') + g4.rjust(25, ' '))
+    print('Score 5:' + format(t5, '.1f').rjust(15, ' ') + g5.rjust(25, ' '))
+    print(''.ljust(40, '-')) # Formatting
+    print('Average Score:'.ljust(40, ' ') + format(average, '.1f'))
 
 def calc_avg(t1, t2, t3, t4, t5):
     calculated = (t1 + t2 + t3 + t4 + t5) / 5
