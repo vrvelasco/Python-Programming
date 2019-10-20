@@ -6,14 +6,14 @@ def main():
     scores = [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
     TESTS = 7 # Constant
 
-  # Get values
+    # Get values
     for i in range(TESTS):
-        tempScore = float(input('Enter the score for test # ' + (scores[i] + 1) + ': '))
+        tempScore = float(input('Enter the score for test #' + str(i + 1) + ': '))
 
         while tempScore < 0:
             tempScore = float(input('Enter a number greater than or equal to zero: '))
 
-        scores[i] = tempScores
+        scores[i] = tempScore
         
     # Calculate total
         # scores.sum()
@@ -22,7 +22,7 @@ def main():
     
     # Calculate Average
         #scores.sum() / score.len() OR scores.sum() / TESTS
-    calcAvg()
+    average = total / TESTS
 
     # Display results
     print('\nScore' + 'Numeric Score'.center(45, ' '))
@@ -30,15 +30,13 @@ def main():
     
     # Loop through list
     for s in scores:
-       print('Score i + 1:' + format(i, '.1f').rjust(25, ' ')) 
+       count = 0
+       print('Score ' + str(count) + ':' + format(scores[s], '.1f').rjust(25, ' ')) 
     
     print(''.ljust(26, '=')) # Formatting
     print('Total:' + format(total, '.1f').rjust(25, ' '))
     print(''.ljust(26, '=')) # Formatting
     print('Average Score:' + format(average, '.1f').rjust(25, ' '))
-
-def calcAvg():
-    return average = total / TESTS
     
 # Call main
 main()
