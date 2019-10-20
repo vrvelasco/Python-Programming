@@ -3,45 +3,42 @@
 def main():
     # Variables
     total = 0
+    scores = [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
     TESTS = 7 # Constant
 
-  # Get user input
-    t1 = float(input('Please enter the FIRST test score: '))
-    t2 = float(input('Please enter the SECOND test score: '))
-    t3 = float(input('Please enter the THIRD test score: '))
-    t4 = float(input('Please enter the FOURTH test score: '))
-    t5 = float(input('Please enter the FIFTH test score: '))
-    t6 = float(input('Please enter the SIXTH test score: '))
-    t7 = float(input('Please enter the SEVENTH test score: '))
+  # Get values
+    for i in range(TESTS):
+        tempScore = float(input('Enter the score for test # ' + (scores[i] + 1) + ': '))
 
-    # Add to list
-    grades = [ t1, t2, t3, t4, t5, t6, t7 ] 
+        while tempScore < 0:
+            tempScore = float(input('Enter a number greater than or equal to zero: '))
 
+        scores[i] = tempScores
+        
     # Calculate total
-    for test in grades:
+        # scores.sum()
+    for test in scores:
         total += test
     
     # Calculate Average
-    average = calc_avg(t1, t2, t3, t4, t5)
+        #scores.sum() / score.len() OR scores.sum() / TESTS
+    calcAvg()
 
     # Display results
     print('\nScore' + 'Numeric Score'.center(45, ' '))
     print(''.ljust(26, '=')) # Formatting
-    print('Score 1:' + format(t1, '.1f').rjust(25, ' '))
-    print('Score 2:' + format(t2, '.1f').rjust(25, ' '))
-    print('Score 3:' + format(t3, '.1f').rjust(25, ' '))
-    print('Score 4:' + format(t4, '.1f').rjust(25, ' '))
-    print('Score 5:' + format(t5, '.1f').rjust(25, ' '))
-    print('Score 6:' + format(t6, '.1f').rjust(25, ' '))
-    print('Score 7:' + format(t7, '.1f').rjust(25, ' '))
+    
+    # Loop through list
+    for s in scores:
+       print('Score i + 1:' + format(i, '.1f').rjust(25, ' ')) 
+    
     print(''.ljust(26, '=')) # Formatting
     print('Total:' + format(total, '.1f').rjust(25, ' '))
     print(''.ljust(26, '=')) # Formatting
     print('Average Score:' + format(average, '.1f').rjust(25, ' '))
 
-def calc_avg(t1, t2, t3, t4, t5):
-    calculated = (t1 + t2 + t3 + t4 + t5) / 5
-    return calculated
+def calcAvg():
+    return average = total / TESTS
     
 # Call main
 main()
