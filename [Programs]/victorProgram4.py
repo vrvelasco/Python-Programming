@@ -25,18 +25,17 @@ def main():
     average = total / TESTS
 
     # Display results
-    print('\nScore' + 'Numeric Score'.center(45, ' '))
+    print('\nScore' + 'Numeric Score'.center(29, ' '))
     print(''.ljust(26, '=')) # Formatting
     
     # Loop through list
-    for s in scores:
-       count = 0
-       print('Score ' + str(count) + ':' + format(scores[s], '.1f').rjust(25, ' ')) 
+    for s in range(TESTS):
+       print('Score ' + str(s + 1) + ':' + format(scores[s], '.1f').rjust(18, ' ')) 
     
     print(''.ljust(26, '=')) # Formatting
-    print('Total:' + format(total, '.1f').rjust(25, ' '))
+    print('Total:' + format(total, '.1f').rjust(20, ' '))
     print(''.ljust(26, '=')) # Formatting
-    print('Average Score:' + format(average, '.1f').rjust(25, ' '))
+    print('Average Score:' + format(average, '.1f').rjust(12, ' '))
     
 # Call main
 main()
